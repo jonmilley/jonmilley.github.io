@@ -1,5 +1,6 @@
 layout: sidebar
-style: light
+style: dark
+include.metadata: true
 
 plugins:
   - jekyll-octicons

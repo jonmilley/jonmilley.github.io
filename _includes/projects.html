@@ -1,9 +1,18 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>My Projects</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">GitHub repositories that I've built.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% for repository in site.github.public_repositories limit: 9 %}
-    <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-      {% include repo-card.html %}
-    </div>
-  {% endfor %}
-</div>
+<section class="section" id="projects">
+  <h2 class="section__title">Featured Projects</h2>
+  <div class="projects-grid">
+    {% for project in site.data.projects %}
+      <a href="{{ project.url }}" class="project-card" target="_blank" rel="noopener noreferrer">
+        <h3 class="project-card__name">{{ project.name }}</h3>
+        <p class="project-card__description">{{ project.description }}</p>
+        {% if project.tech %}
+          <ul class="project-card__tech">
+            {% for tag in project.tech %}
+              <li class="project-card__tag">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>

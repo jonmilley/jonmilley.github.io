@@ -1,0 +1,14 @@
+- name: my-project
+  description: A short description of what this project does and why it matters.
+  url: https://github.com/jonmilley/my-project
+  tech: [TypeScript, React, Node.js]
+
+- name: another-project
+  description: Another project description. One or two sentences is ideal.
+  url: https://github.com/jonmilley/another-project
+  tech: [Python, FastAPI, PostgreSQL]
+
+- name: third-project
+  description: A third project to fill the grid. Replace with real projects.
+  url: https://github.com/jonmilley/third-project
+  tech: [Go, Docker]

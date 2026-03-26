@@ -1,0 +1,6 @@
+- category: Languages
+  items: [TypeScript, JavaScript, Python]
+- category: Frameworks
+  items: [React, Node.js, Express]
+- category: Tools
+  items: [Git, Docker, PostgreSQL]

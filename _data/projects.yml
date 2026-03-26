@@ -13,7 +13,3 @@
   url: https://github.com/jonmilley/today-mobile
   tech: [Flutter, Dart]
 
-- name: townie_radio
-  description: TUI-based streaming radio app for local radio stations in St. John's, NL. Built in Rust.
-  url: https://github.com/jonmilley/townie_radio
-  tech: [Rust]

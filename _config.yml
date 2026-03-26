@@ -1,22 +1,4 @@
-layout: sidebar
-style: dark
-include.metadata: true
-
 plugins:
-  - jekyll-octicons
   - jekyll-github-metadata
 
 permalink: /:year/:month/:day/:title/
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "post"
-
-topics:
-  - name: NodeJS
-    web_url: https://nodejs.org
-    image_url: https://nodejs.org/static/images/logo.svg

@@ -1,12 +1,247 @@
 ---
 ---
-@import url('https://unpkg.com/primer/build/build.css');
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900');
-
-body {
-  font-family: 'Rubik', sans-serif;
+:root {
+  --bg-page: #0d1117;
+  --bg-surface: #161b22;
+  --border: #30363d;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-subtle: rgba(88, 166, 255, 0.1);
+  --accent-border: rgba(88, 166, 255, 0.2);
 }
 
-.github-component {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border);
+  padding: 32px 24px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar__avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.sidebar__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.sidebar__bio {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.sidebar__link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.sidebar__icon {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 40px;
+  max-width: 960px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 48px;
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Project card */
+.project-card {
+  display: block;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: 6px;
+  padding: 16px;
+  color: var(--text-primary);
+  transition: border-color 0.15s;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.project-card__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.project-card__description {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-card__tag {
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+/* Skills */
+.skills-group {
+  margin-bottom: 20px;
+}
+
+.skills-group__category {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.skills-group__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-group__tag {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 24px 20px;
+  }
+
+  .sidebar__bio {
+    margin-bottom: 16px;
+  }
+
+  .main {
+    padding: 24px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

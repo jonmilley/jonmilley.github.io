@@ -8,6 +8,11 @@
   url: https://github.com/jonmilley/today-tui
   tech: [Go]
 
+- name: quiltforge
+  description: Web app for designing quilt blocks, arranging layouts, and estimating fabric requirements.
+  url: https://quiltforge.jonmilley.com
+  tech: [TypeScript]
+
 - name: today-mobile
   description: Flutter mobile companion to the today-tui dashboard, bringing the same at-a-glance daily overview to iOS and Android.
   url: https://github.com/jonmilley/today-mobile

@@ -1,6 +1,6 @@
 - category: Languages
-  items: [TypeScript, JavaScript, Python]
+  items: [TypeScript, JavaScript, Python, c#, Java, Go]
 - category: Frameworks
-  items: [React, Node.js, Express]
+  items: [React, Node.js, Express, FastAPI, Spring Boot]
 - category: Tools
-  items: [Git, Docker, PostgreSQL]
+  items: [Git, Docker, PostgreSQL,AWS,Kafka,MySQL]

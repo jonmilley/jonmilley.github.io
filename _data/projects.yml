@@ -1,14 +1,19 @@
-- name: my-project
-  description: A short description of what this project does and why it matters.
-  url: https://github.com/jonmilley/my-project
-  tech: [TypeScript, React, Node.js]
+- name: gofakesmtp
+  description: A fake SMTP server with a terminal UI for testing email in local development. Point your app at localhost:2525 and watch emails appear in real time — no mail server, no credentials, nothing sent.
+  url: https://github.com/jonmilley/gofakesmtp
+  tech: [Go]
 
-- name: another-project
-  description: Another project description. One or two sentences is ideal.
-  url: https://github.com/jonmilley/another-project
-  tech: [Python, FastAPI, PostgreSQL]
+- name: today-tui
+  description: A terminal dashboard that puts everything you need to start your day in one place — GitHub issues, weather, and stock prices in a split-pane TUI.
+  url: https://github.com/jonmilley/today-tui
+  tech: [Go]
 
-- name: third-project
-  description: A third project to fill the grid. Replace with real projects.
-  url: https://github.com/jonmilley/third-project
-  tech: [Go, Docker]
+- name: today-mobile
+  description: Flutter mobile companion to the today-tui dashboard, bringing the same at-a-glance daily overview to iOS and Android.
+  url: https://github.com/jonmilley/today-mobile
+  tech: [Flutter, Dart]
+
+- name: townie_radio
+  description: TUI-based streaming radio app for local radio stations in St. John's, NL. Built in Rust.
+  url: https://github.com/jonmilley/townie_radio
+  tech: [Rust]
